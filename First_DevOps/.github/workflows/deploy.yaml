@@ -1,0 +1,21 @@
+name: Deploy Static Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: List Project Files
+        run: ls -R
+
+      - name: Build Successful
+        run: echo "Website is ready for deployment!"
+ 
